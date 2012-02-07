@@ -38,6 +38,7 @@ class TicketsController < ApplicationController
       render :action => "edit"
     end
   end
+  
     
   private
     def find_project
