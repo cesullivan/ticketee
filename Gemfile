@@ -18,6 +18,8 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem "oa-oauth", :require => "omniauth/oauth"
+
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
@@ -41,5 +43,6 @@ group :test do
   gem 'database_cleaner'
   gem 'factory_girl'
   gem 'devise','~> 1.4.3'
+  gem 'cancan'
   gem 'email_spec'
 end
