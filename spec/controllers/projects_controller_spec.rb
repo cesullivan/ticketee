@@ -1,7 +1,11 @@
 require 'spec_helper'
 
 describe ProjectsController do
-  let(:user) { create_user! }
+  let(:user) do
+      user = Factory(:user)
+      user.confirm!
+      user
+    end
   
   let(:project) { Factory(:project) }
   
@@ -27,7 +31,6 @@ describe ProjectsController do
     end 
   end
 end
-
           
   it "displays an error for a missing project" do
     sign_in(:user, user)

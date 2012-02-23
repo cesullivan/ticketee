@@ -20,6 +20,7 @@ end
 gem 'jquery-rails'
 gem "oa-oauth", :require => "omniauth/oauth"
 
+gem 'cancan'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
@@ -35,6 +36,7 @@ gem "oa-oauth", :require => "omniauth/oauth"
 
 group :test, :development do
   gem 'rspec-rails', '~> 2.5'
+  gem 'pry-rails'
 end
 
 group :test do
@@ -43,6 +45,6 @@ group :test do
   gem 'database_cleaner'
   gem 'factory_girl'
   gem 'devise','~> 1.4.3'
-  gem 'cancan'
+  gem 'launchy'
   gem 'email_spec'
 end

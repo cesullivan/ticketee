@@ -10,9 +10,6 @@ When /^I check "([^"]*)" for "([^"]*)"$/ do |permission, name|
   steps(%Q{When I check "#{field_id}"})
 end
 
-
-
-
 def create_permission(email, object, action)
   Permission.create!(:user => User.find_by_email!(email),
                      :thing => object,

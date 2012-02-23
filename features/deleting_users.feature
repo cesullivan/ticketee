@@ -8,6 +8,7 @@ Feature: Deleting users
       | email              | password | admin |
       | admin@ticketee.com | password | true  |
       | user@ticketee.com  | password | false |
+
     And I am signed in as "admin@ticketee.com"
     Given I am on the homepage
     When I follow "Admin"

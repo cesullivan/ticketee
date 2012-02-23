@@ -1,5 +1,4 @@
 class TicketsController < ApplicationController
-  
   before_filter :authenticate_user!
   before_filter :find_project
   before_filter :find_ticket, :only => [:show, :edit, :update, :destroy]
@@ -11,10 +10,6 @@ class TicketsController < ApplicationController
     @ticket = @project.tickets.build
   end
   
-  def show
-    
-  end
-  
   def create
     @ticket = @project.tickets.build  (params[:ticket].merge!(:user => current_user))    
     if @ticket.save
@@ -24,6 +19,10 @@ class TicketsController < ApplicationController
       flash[:alert] = "Ticket has not been created."
       render :action => "new"
     end
+  end
+  
+  def show
+    
   end
   
   def edit
@@ -51,7 +50,7 @@ class TicketsController < ApplicationController
       @project = Project.for(current_user).find(params[:project_id])
       rescue ActiveRecord::RecordNotFound
         flash[:alert] = "The project you were looking for could not be found."
-      redirect_to root_path
+        redirect_to root_path
     end
       
     def find_ticket
@@ -77,6 +76,5 @@ class TicketsController < ApplicationController
         flash[:alert] = "You cannot delete tickets from this project."
         redirect_to @project
       end
-    end
-  
+    end  
 end

@@ -8,6 +8,7 @@ Feature: Editing a user
       | email              | password | admin |
       | admin@ticketee.com | password | true  |
     And I am signed in as them
+
     Given there are the following users:
       | email             | password |
       | user@ticketee.com | password |

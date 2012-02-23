@@ -46,10 +46,7 @@ describe TicketsController do
       end
       
       it "cannot update a ticket without permission" do
-        put :update, { :project_id => project.id,
-                               :id => ticket.id,
-                               :ticket => {}
-                             }
+        put :update, { :project_id => project.id, :id => ticket.id, :ticket => {}}
         cannot_update_tickets!
       end
       

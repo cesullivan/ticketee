@@ -11,11 +11,7 @@ Background:
   And there is a project called "TextMate 2"
   And "user@ticketee.com" can view the "TextMate 2" project
 
-  And there is a project called "Internet Explorer"
-
-  Scenario: Listing all projects
-    And I am on the homepage
-    Then I should not see "Internet Explorer"
-    Given there is a project called "TextMate 2"
-    When I follow "TextMate 2"
-    Then I should be on the project page for "TextMate 2"
+Scenario: Listing all projects
+  And I am on the homepage
+  When I follow "TextMate 2"
+  Then I should be on the project page for "TextMate 2"

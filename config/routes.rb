@@ -17,7 +17,9 @@ Ticketee::Application.routes.draw do
   end
 end
 
-  devise_for :users, :controllers => { :registrations => "registrations" }
+  devise_for :users, :controllers => { 
+    :registrations => "registrations" 
+  }
 
   get '/awaiting_confirmation', 
      :to => "users#confirmation", 

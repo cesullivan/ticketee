@@ -19,8 +19,7 @@ class Admin::PermissionsController < Admin::BaseController
     flash[:notice] = "Permissions updated."
     redirect_to admin_user_permissions_path
   end  
-  
-    
+      
   private
     def find_user
         @user = User.find(params[:user_id])

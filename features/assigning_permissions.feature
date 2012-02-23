@@ -8,6 +8,7 @@ Feature: Assigning permissions
       | email              | password | admin |
       | admin@ticketee.com | password | true  |
     And I am signed in as them
+
     And there are the following users:
       | email             | password |
       | user@ticketee.com | password |
@@ -15,6 +16,7 @@ Feature: Assigning permissions
 	And "user@ticketee.com" has created a ticket for this project:
 	  | title  | description       |
 	  | Shiny! | Eye-blindingly so |
+	
     When I follow "Admin"
     And I follow "Users"
     And I follow "user@ticketee.com"
@@ -24,6 +26,7 @@ Feature: Assigning permissions
     When I check "View" for "TextMate 2"
     And I press "Update"
     And I follow "Sign out"
+
     Given I am signed in as "user@ticketee.com"
     Then I should see "TextMate 2"
 
@@ -32,6 +35,7 @@ Feature: Assigning permissions
     When I check "Create tickets" for "TextMate 2"
 	And I press "Update"
     And I follow "Sign out"
+
 	Given I am signed in as "user@ticketee.com"
 	When I follow "TextMate 2"
 	And I follow "New Ticket"
@@ -45,6 +49,7 @@ Feature: Assigning permissions
     And I check "Edit tickets" for "TextMate 2"
     And I press "Update"
     And I follow "Sign out"
+
     Given I am signed in as "user@ticketee.com"
     When I follow "TextMate 2"
     And I follow "Shiny!"
@@ -58,6 +63,7 @@ Feature: Assigning permissions
     And I check "Delete tickets" for "TextMate 2"
     And I press "Update"
     And I follow "Sign out"
+
     Given I am signed in as "user@ticketee.com"
     When I follow "TextMate 2"
     And I follow "Shiny!"
