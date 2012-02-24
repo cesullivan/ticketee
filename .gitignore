@@ -16,3 +16,7 @@
 
 # Ignore book's copy of ticketee
 /ticketee
+
+# Ignore test files
+
+/public/system
