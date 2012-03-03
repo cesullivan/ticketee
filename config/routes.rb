@@ -20,9 +20,13 @@ Ticketee::Application.routes.draw do
     root :to => "base#index"
     resources :users do
       resources :permissions
+    end
+    resources :states do
+      member do
+        get :make_default
+      end
+    end
   end
-end
-
 
   devise_for :users, :controllers => { 
     :registrations => "registrations" 
