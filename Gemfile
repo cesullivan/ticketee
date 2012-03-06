@@ -41,6 +41,7 @@ group :test, :development do
   gem 'rspec-rails', '~> 2.5'
   gem 'pry-rails'
   gem 'factory_girl'
+  gem 'gmail'
 end
 
 group :test do

@@ -20,3 +20,9 @@
 # Ignore test files
 
 /public/system
+
+# Ignore email setup files
+
+config/initializers/mail.rb
+features/sending_emails.feature
+features/gmail.feature
